@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Tiro+Gurmukhi:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid green;
+  -webkit-text-fill-color: black;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+img {
+  width: 50%;
+  height: auto;
+  padding-top: 2em;
+  max-width: 400px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f6f4;
+  gap: 5em;
+}
+
+.text-h2 {
+  font-size: 2em;
+  font-family: "Tiro Gurmukhi", serif;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  margin-top: 3em;
+}
+
+mark {
+  background-color: #ffb682;
+}
+
+input,
+textarea {
+  width: 70vw;
+  height: 3vh;
+  max-width: 20em;
+  background-color: #d9d9d9;
+  border-radius: 50px;
+  border: none;
+  padding: 3vh;
+  font-family: "Poppins", sans-serif;
+  font-size: 2em;
+  border: 0;
+  letter-spacing: 0.1em;
+}
+
+::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+label:active {
+  border: none;
+}
+
+button {
+  width: 10em;
+  height: 5em;
+  border: none;
+  background-color: #c4dfdf;
+  border-radius: 50px 0px 0px 50px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1em;
+  letter-spacing: 0.2em;
+}
+
+button > h2 {
+  font-weight: 500;
+}
+
+.box2 {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  transition: 200ms;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  padding: 2em;
+}
+
+.submitButton {
+  width: 15em;
+  font-weight: 600;
+  font-size: 1.5em;
+  border-radius: 100px;
+}
+
+.inputName,
+.inputNumber,
+.favDrinks,
+.favFoods,
+.thoughts,
+.post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3em;
+}
+
+.drinks,
+.foods {
+  display: flex;
+  background-color: #d9d9d9;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  border-radius: 25px;
+  width: 75vw;
+  height: 7vh;
+  max-width: 43em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  justify-content: flex-start;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+}
+
+.favDrinks,
+.favFoods,
+.thoughts,
+.post > h2 {
+  text-align: center;
+}
+
+.drinks > input,
+.foods > input {
+  width: 1em;
+  height: 1em;
+  margin-left: 1em;
+}
+
+#fav_drinks:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+textarea {
+  width: 70vw;
+  height: 20vh;
+  max-width: 45em;
+  resize: none;
+  border: none;
+  border-radius: 25px;
+  padding: 1em;
+  font-size: 1rem;
+}
+
+@media (max-width: 590px) {
+  body {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 410px) {
+  body {
+    font-size: 0.7rem;
+  }
+}
