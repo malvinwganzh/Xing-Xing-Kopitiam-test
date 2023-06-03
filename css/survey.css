@@ -8,6 +8,7 @@
 body,
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 input:-webkit-autofill,
@@ -45,7 +46,6 @@ body {
   font-family: "Tiro Gurmukhi", serif;
   font-weight: 400;
   letter-spacing: 0.1em;
-  margin-top: 3em;
 }
 
 mark {
@@ -96,16 +96,10 @@ button > h2 {
 .box2 {
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 
-.box3 {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-}
-
-.box3 > button {
+.button_back {
   border-radius: 0px 50px 50px 0px;
 }
 
@@ -125,6 +119,7 @@ form {
   justify-content: center;
   transition: 400ms ease-in-out;
   width: fit-content;
+  padding-top: -200px;
 }
 
 .submitButton {
@@ -161,6 +156,7 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
+
   gap: 3em;
   width: 100vw;
 }
