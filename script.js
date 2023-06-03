@@ -4,18 +4,15 @@ let nextButton = document.getElementById("next_button");
 let allInput = document.getElementsByTagName("input");
 let submitButton = document.getElementById("submit_button");
 
-document.addEventListener("keyup", function (event) {
-  if (event.keycode === 13) {
-    console.log("yes");
-    nextButton.click();
-  }
-});
+const hideKeyboard = (element) => {
+  element.addEventListener("keyup", (KeyboardEvent) => {
+    const key = KeyboardEvent.code || KeyboardEvent.keycode;
+    if (key === "enter" || key === 13) {
+      element.blur();
+    }
+  });
+};
 
-document.addEventListener("keypress", function (event) {
-  if (event.key === "enter") {
-    nextButton.click();
-  }
-});
 
 
 let size = 100;
