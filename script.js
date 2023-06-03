@@ -5,14 +5,14 @@ let allInput = document.getElementsByTagName("input");
 let submitButton = document.getElementById("submit_button");
 
 document.addEventListener("keyup", function (event) {
-  if (event.keycode === 10) {
+  if (event.keycode === 13) {
     console.log("yes");
     nextButton.click();
   }
 });
 
 document.addEventListener("keypress", function (event) {
-  if (event.key === "return") {
+  if (event.key === "enter") {
     nextButton.click();
   }
 });
