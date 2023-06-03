@@ -11,6 +11,12 @@ document.addEventListener("keyup", function (event) {
   }
 });
 
+document.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    nextButton.click();
+  }
+});
+
 
 let size = 100;
 let counter = 0;
