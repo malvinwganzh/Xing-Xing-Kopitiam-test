@@ -4,14 +4,12 @@ let nextButton = document.getElementById("next_button");
 let allInput = document.getElementsByTagName("input");
 let submitButton = document.getElementById("submit_button");
 
-const hideKeyboard = (element) => {
-  element.addEventListener("keyup", (KeyboardEvent) => {
-    const key = KeyboardEvent.code || KeyboardEvent.keycode;
-    if (key === "enter" || key === 13) {
-      element.blur();
-    }
-  });
-};
+allInput.addEventListener("keyup", (KeyboardEvent) => {
+  const key = KeyboardEvent.code || KeyboardEvent.keycode;
+  if (key === "enter" || key === 13) {
+    element.blur();
+  }
+});
 
 
 
