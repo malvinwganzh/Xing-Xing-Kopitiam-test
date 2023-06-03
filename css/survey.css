@@ -119,7 +119,6 @@ form {
   justify-content: center;
   transition: 400ms ease-in-out;
   width: fit-content;
-  padding-top: -200px;
 }
 
 .submitButton {
