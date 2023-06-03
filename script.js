@@ -4,15 +4,22 @@ let nextButton = document.getElementById("next_button");
 let allInput = document.getElementsByTagName("input");
 let submitButton = document.getElementById("submit_button");
 
-
-$(document).ready(function () {
-  $(window).keydown(function (event) {
-    if (event.keyCode == 13) {
-      event.preventDefault();
-      return false;
-    }
-  });
+document.addEventListener("keyup", function (event) {
+  if (event.keycode === 13) {
+    nextButton.click();
+    event.preventDefault();
+    return false;
+  }
 });
+
+document.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    nextButton.click();
+    event.preventDefault();
+    return false;
+  }
+});
+
 
 let size = 100;
 let counter = 0;
