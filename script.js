@@ -4,14 +4,13 @@ let nextButton = document.getElementById("next_button");
 let allInput = document.getElementsByTagName("input");
 let submitButton = document.getElementById("submit_button");
 
-function nextQuestion() {
-  counter++;
-  form.style.transform = "translateX(" + -size * counter + "vw)";
-  prevButton.style.visibility = "visible";
-  if (counter == 5) {
-    nextButton.style.visibility = "hidden";
+document.addEventListener("keyup", function (event) {
+  if (event.keycode === 13) {
+    console.log("yes");
+    nextButton.click();
   }
-}
+});
+
 
 let size = 100;
 let counter = 0;
