@@ -12,107 +12,64 @@
 
   <body>
     <img src="./assets/xin xing logo for web.png" alt="logo" />
-    <form action="test.php" method="post">
-      <div class="inputName">
-        <h2 class="text-h2">Input Your <mark>Name</mark> Here</h2>
-        <input type="text" name="name" id="input_name" placeholder="Ex:John" required="true" />
-      </div>
-
-      <div class="inputNumber">
-        <h2 class="text-h2">Input Your <mark>Number</mark> Here</h2>
-        <input type="number" name="phone_number" id="phone_number" placeholder="+62 123 1231 2312" required="true" />
-      </div>
-
-      <div class="favDrinks">
-        <h2 class="text-h2">What's your <mark>favorite</mark> drink?</h2>
-        <input type="text" name="fav_drinks" placeholder="Ex: Teh Obeng" required="true" />
-      </div>
-
-      <div class="favFoods">
-        <h2 class="text-h2">What's your <mark>favorite</mark> Food?</h2>
-        <input type="Soto Medan" name="fav_foods" placeholder="Ex: Soto Medan" required="true" />
-      </div>
-
-      <!-- checkbox style
-
-      <div class="favDrinks">
-        <h2 class="text-h2">
-          Pick up to <mark> Three</mark> <br />
-          of your favorite drinks
-        </h2>
-        <div class="options">
-          <div class="tehObeng drinks">
-            <input type="checkbox" name="fav_drinks" id="teh_obeng" value="Teh Obeng" />
-            <p>Teh Obeng</p>
-          </div>
-          <div class="kopiSusu drinks">
-            <input type="checkbox" name="fav_drinks" id="kopi_susu" value="Kopi Susu" />
-            <p>Kopi Susu</p>
-          </div>
-          <div class="kopiO drinks">
-            <input type="checkbox" name="fav_drinks" id="kopi_o" value="Kopi O" />
-            <p>Kopi O</p>
-          </div>
-          <div class="tehTarik drinks">
-            <input type="checkbox" name="fav_drinks" id="teh_tarik" value="Teh Tarik" />
-            <p>Teh Tarik</p>
-          </div>
+    <div class="form-container">
+      <form action="test.php" method="post" id="form_survey">
+        <div class="inputName">
+          <h2 class="text-h2">Input Your <mark>Name</mark> Here</h2>
+          <input type="text" name="name" id="input_name" placeholder="Ex:John" required="true" />
         </div>
-      </div>
 
-      <div class="favFoods">
-        <h2 class="text-h2">
-          Pick up to <mark> Three</mark> <br />
-          of your favorite foods
-        </h2>
-        <div class="options">
-          <div class="ayamPenyet foods">
-            <input type="checkbox" name="fav_foods" id="ayam_penyet" value="Ayam Penyet" />
-            <p>Ayam Penyet</p>
-          </div>
-          <div class="sotoMedan foods">
-            <input type="checkbox" name="fav_foods" id="soto_medan" value="Soto Medan" />
-            <p>Soto Medan</p>
-          </div>
-          <div class="lontongSayur foods">
-            <input type="checkbox" name="fav_foods" id="lontong_sayur" value="Lontong Sayur" />
-            <p>Lontong Sayur</p>
-          </div>
+        <div class="inputNumber">
+          <h2 class="text-h2">Input Your <mark>Number</mark> Here</h2>
+          <input type="number" name="phone_number" id="phone_number" placeholder="+62 123 1231 2312" required="true" />
         </div>
-      </div>
 
-    -->
-
-      <div class="thoughts">
-        <h2 class="text-h2">
-          What are your thoughts about <br />
-          the dining <mark> experience</mark> here
-        </h2>
-        <textarea name="thoughts" id="thoughts" placeholder="text..." required="true"></textarea>
-      </div>
-
-      <div class="post">
-        <h2 class="text-h2">
-          Did you know that you can <br />
-          get a 30% <mark>discount</mark> if you <br />
-          post about us and tag us on <br />
-          instagram stories or facebook?
-        </h2>
-        <div class="options">
-          <div class="yes drinks">
-            <input type="radio" name="post_ig" id="yes" value="Yes" />
-            <p>yes</p>
-          </div>
-          <div class="no drinks">
-            <input type="radio" name="post_ig" id="no" value="No" />
-            <p>no</p>
-          </div>
+        <div class="favDrinks">
+          <h2 class="text-h2">What's your <mark>favorite</mark> drink?</h2>
+          <input type="text" name="fav_drinks" placeholder="Ex: Teh Obeng" required="true" />
         </div>
-      </div>
-      <button type="submit" class="submitButton">Save</button>
-    </form>
+
+        <div class="favFoods">
+          <h2 class="text-h2">What's your <mark>favorite</mark> Food?</h2>
+          <input type="Soto Medan" name="fav_foods" placeholder="Ex: Soto Medan" required="true" />
+        </div>
+
+        <div class="thoughts">
+          <h2 class="text-h2">
+            What are your thoughts about <br />
+            the dining <mark> experience</mark> here
+          </h2>
+          <textarea name="thoughts" id="thoughts" placeholder="text..." required="true"></textarea>
+        </div>
+
+        <div class="post">
+          <h2 class="text-h2">
+            Did you know that you can <br />
+            get a 30% <mark>discount</mark> if you <br />
+            post about us and tag us on <br />
+            instagram stories or facebook?
+          </h2>
+          <div class="options">
+            <div class="yes drinks">
+              <input type="radio" name="post_ig" id="yes" value="Yes" />
+              <p>yes</p>
+            </div>
+            <div class="no drinks">
+              <input type="radio" name="post_ig" id="no" value="No" />
+              <p>no</p>
+            </div>
+          </div>
+          <button type="submit" class="submitButton" id="submit_button" onclick="checkValue()">Save</button>
+        </div>
+      </form>
+    </div>
     <div class="box2">
-      <button type="submit"><h2>Next</h2></button>
+      <button onclick="nextQuestion()" id="next_button"><h2>Next</h2></button>
+    </div>
+    <div class="box3">
+      <button onclick="prevQuestion()" id="prev_button"><h2>back</h2></button>
     </div>
   </body>
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </html>
