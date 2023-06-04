@@ -3,8 +3,11 @@ let prevButton = document.getElementById("prev_button");
 let nextButton = document.getElementById("next_button");
 let allInput = document.getElementsByTagName("input");
 let submitButton = document.getElementById("submit_button");
-let input = document.getElementById("input");
-
+let inputName = document.getElementById("input_name");
+let inputNumber = document.getElementById("input_number");
+let inputDrinks = document.getElementById("input_drinks");
+let inputFoods = document.getElementById("input_foods");
+let inputThoughts = document.getElementById("input_thoughts");
 
 document.addEventListener("keyup", function (event) {
   if (event.keycode === 13) {
@@ -22,7 +25,6 @@ document.addEventListener("keypress", function (event) {
   }
 });
 
-
 let size = 100;
 let counter = 0;
 
@@ -33,7 +35,11 @@ function nextQuestion() {
   if (counter == 5) {
     nextButton.style.visibility = "hidden";
   }
-    input.blur();
+  inputName.blur();
+  inputThoughts.blur();
+  inputDrinks.blur();
+  inputFoods.blur();
+  inputNumber.blur();
 }
 
 function prevQuestion() {
@@ -51,7 +57,7 @@ if (counter == 0) {
 }
 
 function checkValue() {
-  if (allInput.value == null) {
+  if (allInput.value === null) {
     swal("Ooops", "seems like you missed some questions", "error", {
       button: "Go Back",
     });
