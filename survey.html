@@ -15,50 +15,29 @@
     <div class="form-container">
       <form action="test.php" method="post" id="form_survey">
         <div class="inputName">
-          <h2 class="text-h2">Input Your <mark>Name</mark> Here</h2>
+          <h2 class="text-h2"><mark>Nama</mark> Anda</h2>
           <input type="text" name="name" id="input_name" placeholder="Ex:John" required="true" inputmode="text" />
         </div>
 
         <div class="inputNumber">
-          <h2 class="text-h2">Input Your <mark>Number</mark> Here</h2>
-          <input type="text" name="phone_number" id="input_number" placeholder="+62 123 1231 2312" required="true"  inputmode="text" />
+          <h2 class="text-h2">Nomor <mark>Handphone</mark> Anda</h2>
+          <input type="text" name="phone_number" id="input_number" placeholder="+62 123 1231 2312" required="true" inputmode="text" />
         </div>
 
         <div class="favDrinks">
-          <h2 class="text-h2">What's your <mark>favorite</mark> drink?</h2>
-          <input type="text" name="fav_drinks" id="input_drinks" placeholder="Ex: Teh Obeng" required="true"  inputmode="text" />
+          <h2 class="text-h2">
+            apa makanan <mark>favorit</mark> anda di <br />
+            Xin Xing Kopitiam?
+          </h2>
+          <input type="text" name="fav_drinks" id="input_drinks" placeholder="Ex: Teh Obeng" required="true" inputmode="text" />
         </div>
 
         <div class="favFoods">
-          <h2 class="text-h2">What's your <mark>favorite</mark> Food?</h2>
-          <input type="Soto Medan" name="fav_foods" id="input_foods" placeholder="Ex: Soto Medan" required="true"  inputmode="text"/>
-        </div>
-
-        <div class="thoughts">
           <h2 class="text-h2">
-            What are your thoughts about <br />
-            the dining <mark> experience</mark> here
+            apa minuman <mark>favorit</mark> anda di <br />
+            Xin Xing Kopitiam?
           </h2>
-          <textarea name="thoughts" id="input_thoughts" placeholder="text..." required="true"></textarea>
-        </div>
-
-        <div class="post">
-          <h2 class="text-h2">
-            Did you know that you can <br />
-            get a 30% <mark>discount</mark> if you <br />
-            post about us and tag us on <br />
-            instagram stories or facebook?
-          </h2>
-          <div class="options">
-            <div class="yes drinks">
-              <input type="radio" name="post_ig" id="yes" value="Yes" />
-              <p>yes</p>
-            </div>
-            <div class="no drinks">
-              <input type="radio" name="post_ig" id="no" value="No" />
-              <p>no</p>
-            </div>
-          </div>
+          <input type="Soto Medan" name="fav_foods" id="input_foods" placeholder="Ex: Soto Medan" required="true" inputmode="text" />
           <button type="submit" class="submitButton" id="submit_button" onclick="checkValue()">Save</button>
         </div>
       </form>

@@ -7,7 +7,6 @@ let inputName = document.getElementById("input_name");
 let inputNumber = document.getElementById("input_number");
 let inputDrinks = document.getElementById("input_drinks");
 let inputFoods = document.getElementById("input_foods");
-let inputThoughts = document.getElementById("input_thoughts");
 
 document.addEventListener("keyup", function (event) {
   if (event.keycode === 13) {
@@ -32,11 +31,10 @@ function nextQuestion() {
   counter++;
   form.style.transform = "translateX(" + -size * counter + "vw)";
   prevButton.style.visibility = "visible";
-  if (counter == 5) {
+  if (counter == 3) {
     nextButton.style.visibility = "hidden";
   }
   inputName.blur();
-  inputThoughts.blur();
   inputDrinks.blur();
   inputFoods.blur();
   inputNumber.blur();
