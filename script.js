@@ -3,6 +3,8 @@ let prevButton = document.getElementById("prev_button");
 let nextButton = document.getElementById("next_button");
 let allInput = document.getElementsByTagName("input");
 let submitButton = document.getElementById("submit_button");
+let input = document.getElementById("input");
+
 
 document.addEventListener("keyup", function (event) {
   if (event.keycode === 13) {
@@ -31,6 +33,7 @@ function nextQuestion() {
   if (counter == 5) {
     nextButton.style.visibility = "hidden";
   }
+    input.blur();
 }
 
 function prevQuestion() {
