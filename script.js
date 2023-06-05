@@ -63,7 +63,7 @@ if (counter == 0) {
 }
 
 function checkValue() {
-  if (allInput.value === null) {
+  if (allInput.value == null) {
     swal("Ooops", "seems like you missed some questions", "error", {
       button: "Go Back",
     });
