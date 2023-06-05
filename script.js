@@ -8,21 +8,29 @@ let inputNumber = document.getElementById("input_number");
 let inputDrinks = document.getElementById("input_drinks");
 let inputFoods = document.getElementById("input_foods");
 
+let enter = 1;
+
 document.addEventListener("keyup", function (event) {
   if (event.keycode === 13) {
-    nextButton.click();
-    event.preventDefault();
-    return false;
+    enter++;
+    if (enter <= allInput.length) {
+      nextButton.click();
+      event.preventDefault();
+      return false;
+    }
+  }
+});
+document.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    enter++;
+    if (enter <= allInput.length) {
+      nextButton.click();
+      event.preventDefault();
+      return false;
+    }
   }
 });
 
-document.addEventListener("keypress", function (event) {
-  if (event.key === "Enter") {
-    nextButton.click();
-    event.preventDefault();
-    return false;
-  }
-});
 
 let size = 100;
 let counter = 0;
